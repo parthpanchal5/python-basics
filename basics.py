@@ -36,6 +36,9 @@
 
 # exxample 3
 # with if
+import pprint
+import copy
+from random import randint, sample
 import sys
 import random
 from typing import Type
@@ -206,3 +209,199 @@ spam = 0
 #     print("Please enter integer")
 
 # list
+# catNames = []
+# while True:
+#     print("Enter name of cat " + str(len(catNames) + 1) + '(or nothing to stop.)')
+#     name = input()
+#     if name == '':
+#         break
+#     catNames = catNames + [name]
+# print('The cat names are: ')
+
+# for name in catNames:
+#     print(' ' + name)
+
+someList = ['cat', 'dog', 'mat']
+
+# for someVal in range(len(someList)):
+#     print('Index ' + str(someVal) + ' in supplies is: ' + someList[someVal])
+
+# 'in' and 'not in'
+
+# 'howdy' in ['hello', 'hi', 'howdy', 'heyas']
+# 'hey' not in ['hello', 'hi', 'howdy', 'heyas']
+
+
+# myPets = ['jacob', 'john', 'lucifer']
+# print("Enter a pet name: ")
+# name = input()
+
+# if name not in myPets:
+#     print('No pet named ' + name)
+# else:
+#     print(name + ' is my pet')
+
+# dog = ['fat', 'black', 'loud']
+# size, color, feature = dog
+# print(dog)
+
+# Magic 8 Ball with a list
+
+
+# messages = [['It is certain',
+#              'It is decidedly so',
+#              'Yes definitely',
+#              'Reply hazy try again',
+#              'Ask again later',
+#              'Concentrate and ask again',
+#              'My reply is no',
+#              'Outlook not so good',
+#              'Very doubtful']]
+# print(messages[random.randint(0, len(messages) - 1)])
+
+
+# passing references
+# def eggs(params):
+# 	params.append('Hello')
+
+# spam = [1, 2, 3]
+# eggs(spam)
+# print(spam)
+
+
+# spam = [['A', 'B', 'C', 'D'], ['a', 'b', 'c', 'd']]
+# cheese = copy.deepcopy(spam)
+# # cheese[1] = 42
+
+# print(spam)
+# print(cheese)
+
+# spam = ['a', 'b', 'c', 'd']
+# print(spam[int(int('3' * 2) / 11)])
+# print(spam[:2])
+
+# bacon = [3.14, 'cat', 11, 'cat', True]
+# print(bacon.remove('cat'))
+# print(bacon)
+
+
+# list1 = [1, 2, 3]
+# list2 = [4, 5, 6]
+
+# list3 = list1 + list1
+# list3 = list1 * list1
+# print(list3)
+
+
+# practice of list
+# spam = ['apples', 'bananas', 'tofu', 'cat']
+# newSpam = [1, 3, 'hello']
+
+
+# def makeStringFromList(aList):
+#     for i in aList:
+#         print(i, end=", ")
+
+
+# makeStringFromList(newSpam)
+
+
+# grid = [['.', '.', '.', '.', '.', '.'],
+#         ['.', 'O', 'O', '.', '.', '.'],
+#         ['O', 'O', 'O', 'O', '.', '.'],
+#         ['O', 'O', 'O', 'O', 'O', '.'],
+#         ['.', 'O', 'O', 'O', 'O', 'O'],
+#         ['O', 'O', 'O', 'O', 'O', '.'],
+#         ['O', 'O', 'O', 'O', '.', '.'],
+#         ['.', 'O', 'O', '.', '.', '.'],
+#         ['.', '.', '.', '.', '.', '.']]
+
+# heart = ''
+# for j in range(len(grid[-1])):
+#     for i in reversed(range(len(grid))):
+#         heart += grid[i][j]
+
+#         if i == 0:
+#             heart += '\n'
+# print(heart)
+
+
+# n = int(input("Enter Num: "))
+
+# if n % 2 != 0:
+#     print('Weird')
+# elif n % 2 == 0 and (n in range(2, 6)):
+#     print('Not Weird 2 - 5')
+# elif n % 2 == 0 and (n in range(6, 21)):
+#     print('Weird 6 - 20')
+# elif n % 2 == 0 and (n in range(20, 101)):
+#     print("Not Weird 20 up")
+
+
+# n = int(input("Enter Num: "))
+
+# for i in range(1, n+1):
+#     print(i, end="")
+
+# Dictonary example
+
+# birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+
+# while True:
+#     print("Enter a name / (blank to quit): ")
+#     name = input()
+#     if name == "":
+#         break
+
+#     if name in birthdays:
+#         print(birthdays[name] + ' is the birthday of ' + name)
+#     else:
+#         print('I don\'t have birthday info for ' + name)
+#         bday = input()
+#         birthdays[name] = bday
+#         print('Birthday database updated')
+
+# spam = {'color': 'red', 'age': 42}
+
+# # for i in spam.values():
+# # for i in spam.keys():
+# for i in spam.items():
+#     print(i)
+
+# message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+# count = {}
+
+# for char in message:
+#     count.setdefault(char, 0)
+#     count[char] = count[char] + 1
+
+# pprint.pprint(count)
+
+
+# theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+#             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
+#             'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+
+
+# def printBoard(board):
+#     print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+#     print("-+-+-")
+#     print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+#     print("-+-+-")
+#     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+#     # print("-+-+-")
+
+
+# turn = 'X'
+
+# for i in range(9):
+#     printBoard(theBoard)
+#     print("Turn for " + turn + ". Move on which space?")
+#     move = input()
+#     theBoard[move] = turn
+#     if turn == 'X':
+#         turn = 'O'
+#     else:
+#         turn = 'X'
+
+# printBoard(theBoard)
