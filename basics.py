@@ -405,3 +405,98 @@ someList = ['cat', 'dog', 'mat']
 #         turn = 'X'
 
 # printBoard(theBoard)
+
+# allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
+#              'Bob': {'ham sandwiches': 3, 'apples': 2},
+#              'Carol': {'cups': 3, 'apple pies': 1}}
+
+
+# def totalBrought(guests, item):
+#     numBrought = 0
+#     for k, v in guests.items():
+#         numBrought = numBrought + v.get(item, 0)
+#     return numBrought
+
+
+# print('Number of things being brought: ')
+# print(" - Apples: " + str(totalBrought(allGuests, 'apples')))
+# print(' - Cups: ' + str(totalBrought(allGuests, 'cups')))
+# print(' - Cakes: ' + str(totalBrought(allGuests, 'cakes')))
+# print(' - Ham Sandwiches: ' + str(totalBrought(allGuests, 'ham sandwiches')))
+# print(' - Apple Pies: ' + str(totalBrought(allGuests, 'apple pies')))
+
+
+# gameInventory = {'rope': 1, 'torch': 6,
+#                  'gold coin': 42, 'dagger': 1, 'arrow': 12}
+
+
+# def displayInventory(inventory):
+#     print("Inventory: ")
+#     inventoryItems = 0
+#     for k, v in inventory.items():
+#         inventoryItems = inventoryItems + v
+#         print(str(v) + " - " + str.capitalize(k))
+
+#     print("Total number of items: " + str(inventoryItems))
+
+
+# displayInventory(gameInventory)
+
+
+# def addToInventory(inventory, addedItems):
+#     for item in addedItems:
+#         inventory.setdefault(item, 0)
+#         inventory[item] += 1
+#     return inventory
+
+
+# def displayInventory(inventory):
+#     print("Inventory: ")
+#     invTotItems = 0
+#     for k, v in inventory.items():
+#         invTotItems = invTotItems + v
+#         print(str(v) + " - " + str(k))
+
+#     print("Total number of items: " + str(invTotItems))
+
+
+# inv = {'gold coin': 42, 'rope': 1}
+# dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+# inv = addToInventory(inv, dragonLoot)
+# displayInventory(inv)
+# print('''Dear Alice,
+# Eve's cat has been arrested for catnapping, cat burglary, and extortion.
+# Sincerely,
+# Bob''')
+
+# Strings
+
+# def printPicnic(itemsDict, leftWidth, rightWdth):
+#     print("PICNIC ITEMS".center(leftWidth + rightWdth, '-'))
+#     for k, v in itemsDict.items():
+#         print(k.ljust(leftWidth, '.') + str(v).rjust(rightWdth))
+
+
+# picnicItems = {'sandwiches': 4,
+#                'apples': 12, 'cups': 4, 'cookies': 8000}
+# printPicnic(picnicItems, 12, 5)
+# printPicnic(picnicItems, 20, 6)
+
+
+# Validate input
+
+# while True:
+#     print('Enter your age: ')
+#     age = input()
+
+#     if age.isdecimal():
+#         break
+#     print('Please enter number for your age.')
+
+# while True:
+#     print('Select a new password (letters and numbers only): ')
+#     password = input()
+#     if password.isalnum():
+#         break
+#     print('Passwords can only have letters and numbers')
+
